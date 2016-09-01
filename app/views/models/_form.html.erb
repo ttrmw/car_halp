@@ -1,0 +1,49 @@
+<%= form_for(@model) do |f| %>
+  <% if @model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+      <% @model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :manufactured_from %><br>
+    <%= f.date_select :manufactured_from %>
+  </div>
+  <div class="field">
+    <%= f.label :manufactured_until %><br>
+    <%= f.date_select :manufactured_until %>
+  </div>
+  <div class="field">
+    <%= f.label :engine_size %><br>
+    <%= f.text_field :engine_size %>
+  </div>
+  <div class="field">
+    <%= f.label :doors %><br>
+    <%= f.number_field :doors %>
+  </div>
+  <div class="field">
+    <%= f.label :trim %><br>
+    <%= f.text_field :trim %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </div>
+  <div class="field">
+    <%= f.label :fuel %><br>
+    <%= f.text_field :fuel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

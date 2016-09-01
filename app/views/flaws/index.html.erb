@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Flaws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Mileage</th>
+      <th>Description</th>
+      <th>Cost estimate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flaws.each do |flaw| %>
+      <tr>
+        <td><%= flaw.model_id %></td>
+        <td><%= flaw.mileage %></td>
+        <td><%= flaw.description %></td>
+        <td><%= flaw.cost_estimate %></td>
+        <td><%= link_to 'Show', flaw %></td>
+        <td><%= link_to 'Edit', edit_flaw_path(flaw) %></td>
+        <td><%= link_to 'Destroy', flaw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flaw', new_flaw_path %>

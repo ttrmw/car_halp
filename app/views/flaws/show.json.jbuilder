@@ -1,0 +1,1 @@
+json.partial! "flaws/flaw", flaw: @flaw

@@ -1,0 +1,1 @@
+json.array! @flaws, partial: 'flaws/flaw', as: :flaw

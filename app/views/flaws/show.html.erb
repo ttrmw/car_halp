@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @flaw.model_id %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @flaw.mileage %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flaw.description %>
+</p>
+
+<p>
+  <strong>Cost estimate:</strong>
+  <%= @flaw.cost_estimate %>
+</p>
+
+<%= link_to 'Edit', edit_flaw_path(@flaw) %> |
+<%= link_to 'Back', flaws_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@flaw) do |f| %>
+  <% if @flaw.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flaw.errors.count, "error") %> prohibited this flaw from being saved:</h2>
+
+      <ul>
+      <% @flaw.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model_id %><br>
+    <%= f.number_field :model_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mileage %><br>
+    <%= f.number_field :mileage %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :cost_estimate %><br>
+    <%= f.number_field :cost_estimate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

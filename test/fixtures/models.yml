@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  manufactured_from: 2016-09-01
+  manufactured_until: 2016-09-01
+  engine_size: 1.5
+  doors: 1
+  trim: MyString
+  body: MyString
+  fuel: 
+
+two:
+  name: MyString
+  manufactured_from: 2016-09-01
+  manufactured_until: 2016-09-01
+  engine_size: 1.5
+  doors: 1
+  trim: MyString
+  body: MyString
+  fuel: 
